@@ -92,7 +92,7 @@ class DemoTagLib {
     }
 
     def whenDone = { attrs, body ->
-        // story javascript from the body in the pagescope
+        // store javascript from the body in the pagescope
         pageScope.handlers.whenDone = body()
     }
 }
