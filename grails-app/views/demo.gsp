@@ -32,7 +32,7 @@
     </demo:exampleOne>
 
     <demo:exampleTwo>
-        <demo:comment>expected success but fails as the r:script will make it execute after example 3 (which will fail)</demo:comment>
+        <demo:comment>expected success but fails as this example uses r:script and runs after example 3 (which breaks)</demo:comment>
         <demo:whenDone>
             var element = $(this);
             var html = element.html();
@@ -41,7 +41,7 @@
     </demo:exampleTwo>
 
     <demo:exampleOne>
-        <demo:comment>should work but fails</demo:comment>
+        <demo:comment>should work but fails (javascript is html encode -> see javascript console)</demo:comment>
         <demo:whenDone>
             var element = $(this);
             var html = element.html();
@@ -50,7 +50,7 @@
     </demo:exampleOne>
 
     <demo:exampleTwo>
-        <demo:comment>should work but fails</demo:comment>
+        <demo:comment>should work but fails (javascript is html encode -> see javascript console)</demo:comment>
         <demo:whenDone>
             var element = $(this);
             var html = element.html();
