@@ -20,7 +20,7 @@ class DemoTagLib {
     }
 
     /**
-     * render main demo tag
+     * render demo tag (uses <script.../>)
      * @param Map       attributes
      * @param Closure   body
      */
@@ -55,7 +55,7 @@ class DemoTagLib {
     }
 
     /**
-     * render main demo tag
+     * render demo tag (uses r:script)
      * @param Map       attributes
      * @param Closure   body
      */
@@ -86,11 +86,21 @@ class DemoTagLib {
         ))
     }
 
+    /**
+     * handle comment tag and put the body content in the pageScope
+     * @param Map       attributes
+     * @param Closure   body
+     */
     def comment = { attrs, body ->
         // add to the page scope
         pageScope.comment = body()
     }
 
+    /**
+     * handle whenDone javascript event handler tag and put the body content in the pageScope
+     * @param Map       attributes
+     * @param Closure   body
+     */
     def whenDone = { attrs, body ->
         // store javascript from the body in the pagescope
         pageScope.handlers.whenDone = body()
