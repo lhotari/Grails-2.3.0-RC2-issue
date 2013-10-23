@@ -1,7 +1,7 @@
 package eu.osx.grails
 
 class DemoTagLib {
-    static defaultEncodeAs = 'raw'
+    static defaultEncodeAs = [all: 'raw']
     //static encodeAsForTags = [tagName: 'raw']
 
     static namespace = "demo"
