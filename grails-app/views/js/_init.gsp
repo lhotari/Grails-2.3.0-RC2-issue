@@ -1,3 +1,4 @@
+<%@page expressionCodec="raw" %>
 $(document).ready(function() {
     // wait 1 second before runnings
     setTimeout(function() {
